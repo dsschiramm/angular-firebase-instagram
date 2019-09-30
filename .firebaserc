@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dss-api-357ac": {
+      "hosting": {
+        "angular-instagram": [
+          "dss-api-357ac"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dss-api-357ac"
+  }
+}

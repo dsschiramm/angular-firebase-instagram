@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="row">
+
+		<div [@animation-banner]="bannerState" class="col-sm-6 d-flex justify-content-end">
+			<app-banner></app-banner>
+		</div>
+
+		<div *ngIf="flRegister; else formLogin" 
+			[@animation-painel]="bannerState" 
+			(@animation-painel.start)="startAnimation()" 
+			(@animation-painel.done)="doneAnimation()"
+			class="col-sm-6 d-flex justify-content-start">
+
+			<app-register (flRegister)="register($event)"></app-register>
+		</div>
+
+		<ng-template #formLogin>
+			<div class="col-sm-6 d-flex justify-content-start"
+				[@animation-painel]="bannerState"
+				(@animation-painel.start)="startAnimation()"
+				(@animation-painel.done)="doneAnimation()">
+
+				<app-login (flRegister)="register($event)"></app-login>
+			</div>
+		</ng-template>
+		
+	</div>
+</div>

@@ -1,0 +1,7 @@
+<div class="banner-background">
+	<img *ngFor="let image of imageList"
+		[@banner]="image.state"
+		class="position-absolute"
+		[src]="image.url"
+		alt="Responsive image">
+</div>
